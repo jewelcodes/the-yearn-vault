@@ -1,8 +1,16 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Menu from "./pages/Menu/Menu";
+import Home from "./pages/Home/Home";
 
 function App() {
     return (
-        <h1>hi</h1>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Menu />}>
+                </Route>
+            </Routes>
+        </BrowserRouter>
     );
 }
 

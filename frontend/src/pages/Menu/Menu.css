@@ -1,0 +1,63 @@
+.top-bar {
+    width: 100vw;
+    background-color: var(--dark);
+    padding: 2em 7em;
+    color: var(--white);
+
+    display: flex;
+    flex-direction: row;
+}
+
+.top-bar .logo {
+    width: 20%;
+    text-align: left;
+    font-weight: bold;
+}
+
+.top-bar .menu {
+    width: 60%;
+    text-align: center;
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.top-bar .menu li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.top-bar .menu li a {
+    display: inline-block;
+    margin: 0 0.7em;
+}
+
+.top-bar .logo a, .top-bar .menu a {
+    color: var(--white);
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.top-bar .logo a:hover, .top-bar .menu a:hover {
+    opacity: 0.85;
+}
+
+.top-bar .submit {
+    width: 20%;
+    text-align: right;
+}
+
+.top-bar .submit a {
+    background-color: var(--medium2);
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.4em 1em;
+    border-radius: 1em;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.top-bar .submit a:hover {
+    background-color: var(--medium3);
+}
