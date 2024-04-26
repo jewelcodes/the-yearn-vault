@@ -17,5 +17,5 @@ body {
     width: 100vw;
     overflow-x: hidden !important;
     font-family: "Quicksand", "San Francisco", "Segoe UI", "Helvetica", "Roboto", sans-serif;
-    background-color: var(--white);
+    background-color: var(--light);
 }
