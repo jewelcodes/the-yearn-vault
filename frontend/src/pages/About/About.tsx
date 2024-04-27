@@ -1,10 +1,9 @@
 import React from "react";
-import "./About.css";
 import { Link } from "react-router-dom";
 
 export default function About() {
     return (
-        <section className="about">
+        <section className="sec">
             <h1>The Yearn Vault</h1>
             <h2>&ldquo;The best way to get over a woman is to turn her into literature.&rdquo; &mdash; Henry Miller (according to 500 Days of Summer)</h2>
             <p>While I'm not particularly gifted in the creative writing area, I like to think I'm at least a better-than-average coder, and that's exactly how the Yearn Vault was born &ndash; this project is dedicated to everyone I ever loved.</p>

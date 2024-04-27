@@ -74,3 +74,30 @@ a:hover {
 .v-spacer {
     display: block;
 }
+
+.sec {
+    padding: 25vh calc(var(--side-spacing-desktop) * 1.5);
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.sec h1 {
+    margin: 0 0 0.1em 0;
+    padding: 0;
+    font-size: 3em;
+}
+
+.sec h2 {
+    margin: 0 0 3em 0;
+    padding: 0;
+    font-size: 0.9em;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.sec p {
+    text-align: justify;
+    text-align-last: left;
+    margin: 0 0 1.2em 0;
+    padding: 0;
+}
