@@ -2,7 +2,6 @@ import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
 import respond from "./respond";
 import connect from "./database";
-import mongoose from "mongoose";
 
 dotenv.config();
 
