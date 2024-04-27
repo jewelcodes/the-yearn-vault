@@ -11,7 +11,7 @@ function Home() {
             </section>
             <section className="home-description">
                 <div className="type"></div>
-                <h1>The Yearning Vault was created for those of us who yearn for closure.</h1>
+                <h1>The Yearn Vault was created for those of us who yearn for closure.</h1>
             </section>
             <section className="home-works">
                 <h1>How it works</h1>
