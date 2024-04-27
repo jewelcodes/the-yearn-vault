@@ -36,6 +36,16 @@
     }
 }
 
+@keyframes home-flash {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
 .home-banner h1 {
     position: relative;
     display: block;
@@ -65,6 +75,16 @@
     animation-delay: 0;
     animation-timing-function: ease-in-out;
     animation-duration: 0.4s;
+}
+
+.home-flash {
+    animation-name: home-flash;
+    animation-iteration-count: infinite;
+    animation-delay: 0;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    font-weight: 200;
+    user-select: none !important;
 }
 
 .home-description {

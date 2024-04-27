@@ -5,7 +5,7 @@ function Home() {
     return (
         <>
             <section className="home-banner">
-                <h1>Yearning?<br />Know what you wanna hear?</h1>
+                <h1>Yearning?<br />Know what you wanna hear?<span className="home-flash">|</span></h1>
                 <div className="phone"></div>
             </section>
             <section className="home-description">
