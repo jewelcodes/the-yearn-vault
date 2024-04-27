@@ -1,0 +1,68 @@
+.home-banner {
+    min-height: 100vh;
+    padding: 16vh var(--side-spacing-desktop);
+    color: var(--white);
+    background-color: var(--dark);
+    background-image: url("../../assets/mtn.png");
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@keyframes home-banner-entrance {
+    from {
+        left: 5vw;
+        opacity: 0;
+    }
+
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes home-phone-entrance {
+    from {
+        top: -2vh;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.home-banner h1 {
+    position: relative;
+    display: block;
+    width: 75%;
+    margin: 3.5em 0 0 0;
+    padding: 0;
+    font-size: 3.1em;
+
+    animation-name: home-banner-entrance;
+    animation-iteration-count: 1;
+    animation-delay: 0;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+}
+
+.home-banner .phone {
+    position: relative;
+    width: 25%;
+    padding-bottom: 46%;    /* aspect ratio */
+
+    background-image: url("../../assets/phone.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    animation-name: home-phone-entrance;
+    animation-iteration-count: 1;
+    animation-delay: 0;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.4s;
+}
