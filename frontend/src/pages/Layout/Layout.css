@@ -68,12 +68,16 @@
 }
 
 footer {
-    padding: 6vh var(--side-spacing-desktop);
+    padding: 15vh var(--side-spacing-desktop);
     background-color: var(--gray);
     color: var(--white);
     text-align: center;
     font-size: 1.1em;
     line-height: 130%;
+    background-image: url("../../assets/footer.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 footer a {
