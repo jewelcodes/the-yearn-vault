@@ -66,3 +66,31 @@
     animation-timing-function: ease-in-out;
     animation-duration: 0.4s;
 }
+
+.home-description {
+    padding: 31vh var(--side-spacing-desktop);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.home-description .type {
+    position: relative;
+    width: 30%;
+
+    background-image: url("../../assets/typing.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+}
+
+.home-description h1 {
+    position: relative;
+    display: block;
+    width: 70%;
+    margin: 0;
+    padding: 0;
+    font-size: 3.3em;
+    text-align: justify;
+    text-align-last: left;
+}
