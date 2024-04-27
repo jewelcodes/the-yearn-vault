@@ -66,3 +66,21 @@
 .top-bar .submit a:hover {
     background-color: var(--medium3);
 }
+
+footer {
+    padding: 6vh var(--side-spacing-desktop);
+    background-color: var(--gray);
+    color: var(--white);
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 130%;
+}
+
+footer a {
+    text-decoration: underline;
+    color: var(--white);
+}
+
+footer a:hover {
+    text-decoration: none;
+}

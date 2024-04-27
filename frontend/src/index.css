@@ -10,6 +10,7 @@
     --medium2: #8090d6;
     --medium3: #5266b6;
     --black: #1b1b1b;
+    --gray: #24242a;
     --white: #f8f8ff;
     --side-spacing-desktop: 8vw;
 }
@@ -49,8 +50,12 @@ body {
 }
 
 .button-default {
-    background-color: var(--dark);
+    background-color: var(--dark) !important;
     font-weight: bold;
+}
+
+.button-default:hover {
+    background-color: var(--medium2) !important;
 }
 
 .h-spacer {

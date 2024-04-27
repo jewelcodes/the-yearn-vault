@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet } from "react-router-dom";
-import './Menu.css';
+import './Layout.css';
 
 function Menu() {
     return (
@@ -20,6 +20,10 @@ function Menu() {
                 </div>
             </div>
             <Outlet />
+            <footer>
+                <div>Built with 💗 from Boston &amp; Cairo</div>
+                <div><a href="https://jewelcodes.io/">jewelcodes.io</a></div>
+            </footer>
         </>
     );
 }
