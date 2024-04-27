@@ -1,6 +1,8 @@
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
 import respond from "./respond";
+import connect from "./database";
+import mongoose from "mongoose";
 
 dotenv.config();
 
@@ -15,6 +17,7 @@ app.get("/", (req: Request, res: Response) => {
     respond(res, life);
 });
 
-app.listen(port, () => {
-    console.log("[server]: Server is running at http://localhost:${port}");
+app.listen(port, async () => {
+    await connect();
+    console.log("[server]: Server is running at http://localhost:" + port);
 });
