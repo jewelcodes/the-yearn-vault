@@ -21,7 +21,7 @@ function Menu() {
             </div>
             <Outlet />
             <footer>
-                <div>Built with 💗 from Boston &amp; Cairo</div>
+                <div>Made with 💗 from Boston &amp; Cairo</div>
                 <div><a href="https://jewelcodes.io/">jewelcodes.io</a></div>
             </footer>
         </>
