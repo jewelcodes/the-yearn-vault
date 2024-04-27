@@ -1,5 +1,6 @@
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
+import respond from "./respond";
 
 dotenv.config();
 
@@ -7,12 +8,11 @@ const app: Express = express();
 const port = process.env.PORT || 8000;
 
 app.get("/", (req: Request, res: Response) => {
-    res.type("application/json");
-    let hello = {
+    const life = {
         alive: true,
         version: 1
     };
-    res.send(hello);
+    respond(res, life);
 });
 
 app.listen(port, () => {
