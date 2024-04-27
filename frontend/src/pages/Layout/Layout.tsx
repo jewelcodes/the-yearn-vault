@@ -10,10 +10,10 @@ function Menu() {
                     <Link to="/">The Yearn Vault</Link>
                 </div>
                 <ul className="menu">
-                    <li><Link to="/">Home</Link></li>
                     <li><Link to="/submissions">Submissions</Link></li>
                     <li><Link to="/about">About</Link></li>
-                    <li><Link to="/privacy">Privacy Statement</Link></li>
+                    <li><Link to="/privacy">Privacy</Link></li>
+                    <li><Link to="/support">Support the Project</Link></li>
                 </ul>
                 <div className="submit">
                     <Link to="/submit">Submit</Link>
