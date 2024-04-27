@@ -9,7 +9,7 @@
     --medium1: #a0a9ed;
     --medium2: #8090d6;
     --medium3: #5266b6;
-    --black: #00054b;
+    --black: #1b1b1b;
     --white: #f8f8ff;
     --side-spacing-desktop: 8vw;
 }
@@ -30,4 +30,33 @@ body {
     overflow-x: hidden !important;
     font-family: "Quicksand", "San Francisco", "Segoe UI", "Helvetica", "Roboto", sans-serif;
     background-color: var(--light);
+}
+
+.button {
+    text-decoration: none !important;
+    color: var(--white) !important;
+    background-color: var(--medium2);
+    padding: 1em 1.5em;
+    font-size: 1.15em;
+    line-height: 100%;
+    display: inline-block;
+    border-radius: 2em;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--medium3);
+}
+
+.button-default {
+    background-color: var(--dark);
+    font-weight: bold;
+}
+
+.h-spacer {
+    display: inline-block;
+}
+
+.v-spacer {
+    display: block;
 }
