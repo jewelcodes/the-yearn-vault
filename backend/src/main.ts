@@ -2,6 +2,7 @@ import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
 import respond from "./respond";
 import connect from "./database";
+import submit from "./endpoints/submit";
 
 dotenv.config();
 
@@ -14,6 +15,10 @@ app.get("/", (req: Request, res: Response) => {
         version: 1
     };
     respond(res, life);
+});
+
+app.post("/submit", (req: Request, res: Response) => {
+    submit(req, res);
 });
 
 app.listen(port, async () => {
