@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
 
-const Schema = mongoose.Schema;
-
-export const messageSchema = new Schema({
+export const messageSchema = new mongoose.Schema({
     id: String,
     sender: String,
     message: String,
@@ -11,7 +9,7 @@ export const messageSchema = new Schema({
     timezone: String,
 });
 
-export const reportSchema = new Schema({
+export const reportSchema = new mongoose.Schema({
     id: String,
     timestamp: String
 });
