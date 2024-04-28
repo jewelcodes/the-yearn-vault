@@ -17,7 +17,7 @@ app.get("/", (req: Request, res: Response) => {
     respond(res, life);
 });
 
-app.post("/submit", (req: Request, res: Response) => {
+app.get("/submit", (req: Request, res: Response) => {
     submit(req, res);
 });
 
