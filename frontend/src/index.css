@@ -52,6 +52,7 @@ a:hover {
     --webkit-appearance: none !important;  /* fucking safari again */
     border: none !important;
     cursor: pointer;
+    font-family: inherit;
     text-decoration: none !important;
     color: var(--white) !important;
     background-color: var(--medium2);
