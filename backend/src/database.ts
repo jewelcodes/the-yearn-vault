@@ -6,6 +6,7 @@ export const messageSchema = new Schema({
     id: String,
     sender: String,
     message: String,
+    color: String,
     timestamp: String,
     timezone: String,
 });
