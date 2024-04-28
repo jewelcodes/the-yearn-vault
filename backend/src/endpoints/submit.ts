@@ -5,6 +5,8 @@ import mongoose from "mongoose";
 import respond from "../respond";
 
 export default async function submit(req: Request, res: Response) {
+    //console.log("submit endpoint called");
+    //console.log(req);
     const sender = req.body.sender;
     const message = req.body.message;
     const color = req.body.color;
