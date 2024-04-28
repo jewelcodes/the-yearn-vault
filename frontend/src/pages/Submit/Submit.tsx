@@ -2,17 +2,31 @@ import React from "react";
 import MessageEditor from "../../components/MessageEditor";
 import "./Submit.css";
 import { Link } from "react-router-dom";
+import { post } from "../../wrapper/wrapper";
 
 export default function Submit() {
-    const submitForm = async () => {
-        // TODO
+    const submitForm = async (e:any) => {
+        // construct request body
+        const sender = e.target.elements.sender.value;
+        const message = e.target.elements.message.value;
+        const color = e.target.elements.color.value;
+        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+        let body = "sender=" + sender;
+        body += "&message=" + message;
+        body += "&color=" + color;
+        body += "&timezone=" + timezone;
+
+        // now make the request
+        let response = await post("submit", body);
+        return response;
     };
 
     return (
         <section className="sec">
             <form onSubmit={(e) => {
                 e.preventDefault();
-                submitForm();
+                submitForm(e);
                 return false;
             }}>
                 <MessageEditor color="blue" />
