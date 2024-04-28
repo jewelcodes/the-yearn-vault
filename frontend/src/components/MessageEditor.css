@@ -1,5 +1,7 @@
 .message-preview {
-    width: 70vw;
+    width: 60vw;
+    height: 25vw;
+    padding: 0 !important;
 }
 
 .message-preview textarea {
@@ -22,7 +24,7 @@
 
 .message-sender-input {
     display: block;
-    width: 70vw;
+    width: 60vw;
     margin: 0 auto 0.5em auto;
     border: none;
     background: none transparent;
@@ -36,14 +38,14 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
 }
 
 .color-picker div {
-    width: calc(20% - 2vw);
-    padding-bottom: calc(20% - 2vw - 0.2em);
-    margin: 1vw;
+    width: calc(20% - 0.8vw);
+    padding-bottom: calc(20% - 0.8vw - 0.2em);
+    margin: 0.4vw;
     border: 0.1em solid var(--black);
     cursor: pointer;
     transition: opacity 0.2s ease-in-out;
