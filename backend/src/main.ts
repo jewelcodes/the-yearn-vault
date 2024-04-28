@@ -4,6 +4,7 @@ import respond from "./respond";
 import connect from "./database";
 import submit from "./endpoints/submit";
 import search from "./endpoints/search";
+import read from "./endpoints/read";
 
 dotenv.config();
 
@@ -34,6 +35,10 @@ app.get("/search/:page", (req: Request, res: Response) => {
 
 app.get("/search/:page/:query", (req: Request, res: Response) => {
     search(req, res);
+});
+
+app.get("/read/:id", (req: Request, res: Response) => {
+    read(req, res);
 });
 
 app.listen(port, async () => {
