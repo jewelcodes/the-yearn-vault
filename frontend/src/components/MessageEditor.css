@@ -19,3 +19,15 @@
     color: inherit;
     opacity: 0.5;
 }
+
+.message-sender-input {
+    display: block;
+    width: 70vw;
+    margin: 0 auto 0.5em auto;
+    border: none;
+    background: none transparent;
+    --webkit-appearance: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}

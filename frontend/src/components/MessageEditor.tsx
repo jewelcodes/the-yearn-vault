@@ -18,9 +18,12 @@ export default function MessageEditor(props:any) {
 
     return (
         <>
-            <input type="text" className="message-sender-input" />
+            <input placeholder="Who do you need to hear it from?" type="text" className="message-sender-input" />
             <div className={c+color}>
                 <textarea maxLength={111} placeholder="What do you need to hear?" className="message-text" onKeyDown={preventLineBreak} />
+            </div>
+            
+            <div className="color-picker">
             </div>
         </>
     );
