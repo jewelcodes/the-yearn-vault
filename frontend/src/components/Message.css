@@ -7,7 +7,7 @@
     width: 23vw;
     height: 23vw;
 
-    margin: 0 auto;
+    margin: 0 auto 8.26% auto;  /* aspect ratio */
 
     --orange: #FF914D;
     --green: #00BF63;
@@ -26,10 +26,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-overflow: ellipsis;
-}
-
-.message-preview {
-    width: 70vw;
 }
 
 /* 184x152 */

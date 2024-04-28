@@ -1,0 +1,21 @@
+.message-preview {
+    width: 70vw;
+}
+
+.message-preview textarea {
+    resize: none;
+    border: none;
+    background: none transparent;
+    --webkit-appearance: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.message-preview textarea::placeholder {
+    color: inherit;
+    opacity: 0.5;
+}
