@@ -5,6 +5,7 @@ import Layout from "./pages/Layout/Layout";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Submit from "./pages/Submit/Submit";
+import Submissions from "./pages/Submissions/Submissions";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                     <Route index element={<Home />} />
                     <Route path="about" element={<About /> } />
                     <Route path="submit" element={<Submit /> } />
+                    <Route path="submissions" element={<Submissions />} />
                 </Route>
             </Routes>
         </BrowserRouter>
