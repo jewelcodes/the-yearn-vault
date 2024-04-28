@@ -24,6 +24,7 @@ export default function MessageEditor(props:any) {
             </div>
             
             <div className="color-picker">
+                <div></div>
             </div>
         </>
     );

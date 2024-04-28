@@ -8,12 +8,6 @@
     height: 23vw;
 
     margin: 0 auto 8.26% auto;  /* aspect ratio */
-
-    --orange: #FF914D;
-    --green: #00BF63;
-    --red: #A81E1E;
-    --purple: #81488D;
-    --blue: #48598D;
 }
 
 .message-text {

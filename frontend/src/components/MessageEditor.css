@@ -31,3 +31,18 @@
     font-size: inherit;
     color: inherit;
 }
+
+.color-picker {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.color-picker div {
+    width: 33%;
+    padding-bottom: 20%;
+}
+
+.color-
