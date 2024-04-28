@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import respond from "./respond";
 import connect from "./database";
 import submit from "./endpoints/submit";
+import search from "./endpoints/search";
 
 dotenv.config();
 
@@ -21,6 +22,18 @@ app.get("/", (req: Request, res: Response) => {
 
 app.post("/submit", (req: Request, res: Response) => {
     submit(req, res);
+});
+
+app.get("/search", (req: Request, res: Response) => {
+    search(req, res);
+});
+
+app.get("/search/:page", (req: Request, res: Response) => {
+    search(req, res);
+});
+
+app.get("/search/:page/:query", (req: Request, res: Response) => {
+    search(req, res);
 });
 
 app.listen(port, async () => {
