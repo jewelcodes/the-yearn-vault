@@ -41,8 +41,35 @@
 }
 
 .color-picker div {
-    width: 33%;
-    padding-bottom: 20%;
+    width: calc(20% - 2vw);
+    padding-bottom: calc(20% - 2vw - 0.2em);
+    margin: 1vw;
+    border: 0.1em solid var(--black);
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
 }
 
-.color-
+.color-picker div:hover {
+    opacity: 0.7;
+}
+
+.color-blue {
+    background-color: var(--blue);
+}
+
+.color-orange {
+    background-color: var(--orange);
+}
+
+.color-red {
+    background-color: var(--red);
+}
+
+.color-purple {
+    background-color: var(--purple);
+}
+
+.color-green {
+    background-color: var(--green);
+}
+

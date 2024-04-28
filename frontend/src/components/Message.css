@@ -46,3 +46,45 @@
 .message-blue::after {
     background-image: url("../assets/blue-arrow.png");
 }
+
+.message-green {
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 1.5em;
+}
+
+.message-green::after {
+    background-image: url("../assets/green-arrow.png");
+}
+
+.message-red {
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 1.5em;
+}
+
+.message-red::after {
+    background-image: url("../assets/red-arrow.png");
+}
+
+.message-purple {
+    background-color: var(--purple);
+    color: var(--white);
+    font-size: 1.5em;
+}
+
+.message-purple::after {
+    background-image: url("../assets/purple-arrow.png");
+}
+
+.message-orange {
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 1.5em;
+}
+
+.message-orange::after {
+    background-image: url("../assets/orange-arrow.png");
+}
+
+
