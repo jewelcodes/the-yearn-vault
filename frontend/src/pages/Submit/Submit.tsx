@@ -25,7 +25,7 @@ export default function Submit() {
             // TODO: error handling
         } else {
             setAppend(
-                <p>Your message was posted. <Link to={"/submissions/" + response.id}>You can view it now</Link>.</p>
+                <p style={{textAlign: "center", textAlignLast: "center"}}>Your message was posted. <Link to={"/submissions/" + response.id}>You can view it now</Link>.</p>
             );
         }
     };
