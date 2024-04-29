@@ -75,3 +75,27 @@
     background-color: var(--green);
 }
 
+
+/* mobile styles */
+
+@media screen and (max-width: 1023px) {
+    .message-preview {
+        width: 90vw;
+        height: 28vh;
+        font-size: 1.1em;
+    }
+
+    .message-preview textarea {
+        font-size: 1.1em;
+    }
+
+    .message-sender-input {
+        width: 90vw;
+        font-size: 1.1em;
+    }
+
+    .color-picker {
+        width: 80%;
+        margin: 3em auto 0 auto;
+    }
+}

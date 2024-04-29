@@ -11,3 +11,11 @@ form {
     display: block !important;
     margin: 0 auto;
 }
+
+/* mobile styles */
+
+@media screen and (max-width: 1023px) {
+    .disclaimer {
+        font-size: 1em;
+    }
+}
