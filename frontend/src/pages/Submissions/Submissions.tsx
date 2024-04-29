@@ -46,6 +46,13 @@ export default function Submissions() {
                             </Link>
                         </div>
                     );
+                    /*setMessages([...messages, (
+                        <div key={response.messages[i]}>
+                            <Link to={response.messages[i]}>
+                                <Message color={messageData.color} text={messageData.message} sender={messageData.sender} />
+                            </Link>
+                        </div>
+                    )]);*/
                 }
             }
 
