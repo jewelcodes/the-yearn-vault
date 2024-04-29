@@ -1,4 +1,4 @@
-const apiRoot = "http://127.0.0.1:3000/";   // TODO: fix when deploying
+const apiRoot = "/";   // TODO: fix when deploying
 
 export async function post(endpoint:string, body:string) {
     let req = await fetch(apiRoot + endpoint, {
