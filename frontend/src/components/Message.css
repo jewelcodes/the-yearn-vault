@@ -37,6 +37,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-overflow: ellipsis;
+    text-wrap: wrap;
+    word-wrap: break-word;
 }
 
 p.message-text {    /* only for the actual text and not the textarea, thus emphasizing the p tag */
