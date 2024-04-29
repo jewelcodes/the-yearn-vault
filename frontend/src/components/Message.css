@@ -93,4 +93,10 @@ p.message-text {    /* only for the actual text and not the textarea, thus empha
     background-image: url("../assets/orange-arrow.png");
 }
 
+/* mobile styles */
 
+@media screen and (max-width: 1023px) {
+    .message {
+        font-size: 1em;
+    }
+}
