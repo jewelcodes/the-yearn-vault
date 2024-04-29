@@ -12,10 +12,17 @@ export default async function search(req: Request, res: Response) {
     let page:number = (req.params.page as unknown) as number || 0;
     let query = req.params.query;
 
-    // 20 items per page is reasonable I think
     const Model = mongoose.model("message", messageSchema);
-    const pageCount:number = Math.floor((await Model.countDocuments() + itemsPerPage - 1) / itemsPerPage);
-    const docs = await Model.find().skip(page*itemsPerPage).sort({$natural: -1}).limit(itemsPerPage);
+    let pageCount:number;
+    let docs;
+    
+    if(!query) {
+        docs = await Model.find().skip(page*itemsPerPage).sort({$natural: -1}).limit(itemsPerPage);
+        pageCount = Math.floor((await Model.countDocuments() + itemsPerPage - 1) / itemsPerPage);
+    } else {
+        docs = await Model.find({sender: query}).skip(page*itemsPerPage).sort({$natural: -1}).limit(itemsPerPage);
+        pageCount = Math.floor((await Model.countDocuments({sender: query}) + itemsPerPage - 1) / itemsPerPage);
+    }
 
     for(let i = 0; docs.length && i < docs.length; i++) {
         messages.push(docs[i].id);
