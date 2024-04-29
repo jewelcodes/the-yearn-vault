@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Submissions.css";
 import Message from "../../components/Message";
+import LoadMore from "../../components/LoadMore";
 import { get } from "../../wrapper/wrapper";
 
 export default function Submissions() {
@@ -50,7 +51,7 @@ export default function Submissions() {
             // check if a button is necessary
             if(page < response.pages-1) {
                 setButton(
-                    <button className="button button-default"  onClick={() => { nextPage() }}>Load More</button>
+                    <LoadMore handler={() => nextPage()} />
                 );
             } else {
                 setButton(
