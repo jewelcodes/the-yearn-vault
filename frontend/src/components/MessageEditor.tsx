@@ -20,7 +20,7 @@ export default function MessageEditor(props:any) {
     return (
         <>
             <input name="color" id="color" type="hidden" value={color} />
-            <input name="sender" id="sender" required minLength={2} maxLength={20} autoComplete="off" placeholder="Who do you need to hear it from?" type="text" className="message-sender-input" />
+            <input name="sender" id="sender" maxLength={20} autoComplete="off" placeholder="Optional: Who do you need to hear it from?" type="text" className="message-sender-input" />
             <div className={c+color}>
                 <textarea name="message" id="message" required minLength={8} maxLength={100} placeholder="What do you need to hear?" className="message-text" onKeyDown={preventLineBreak} />
             </div>
