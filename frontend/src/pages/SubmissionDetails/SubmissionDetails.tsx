@@ -53,13 +53,14 @@ export default function SubmissionDetails() {
             <section className="sec">
                 <div className="submission-details">
                     <Message details color={message.color} text={message.message} sender={message.sender} />
+
+                    <div className="v-spacer" style={{height: "2em"}} />
+                    <p>
+                        From <strong>{message.sender}</strong><br />
+                        <small>Posted {timeString(message.timestamp)}</small>
+                    </p>
+                    <p>{message.message}</p>
                 </div>
-                <div className="v-spacer" style={{height: "2em"}} />
-                <p>
-                    From <strong>{message.sender}</strong><br />
-                    <small>Posted {timeString(message.timestamp)}</small>
-                </p>
-                <p>{message.message}</p>
             </section>
         )
     } else {
