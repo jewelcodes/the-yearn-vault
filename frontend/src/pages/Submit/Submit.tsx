@@ -22,7 +22,9 @@ export default function Submit() {
         // now make the request
         let response = await post("submit", body);
         if(!response || !response.ok) {
-            // TODO: error handling
+            setAppend(
+                <p>We weren't able to post your message. Please check your internet connection or try refreshing the page.</p>
+            );
         } else {
             setAppend(
                 <p style={{textAlign: "center", textAlignLast: "center"}}>Your message was posted. <Link to={"/submissions/" + response.id}>You can view it now</Link>.</p>
