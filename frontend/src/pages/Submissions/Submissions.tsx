@@ -8,7 +8,7 @@ export default function Submissions() {
     let [page, setPage] = useState(0);
     let [messages, setMessages] = useState([]);
     let [loading, setLoading] = useState(false);
-    let [last, setLast] = useState(false);
+    let [button, setButton] = useState(null);
 
     const nextPage = () => {
         setPage(page+1);
@@ -23,7 +23,7 @@ export default function Submissions() {
         setLoading(true);
 
         console.log("fetching page " + page);
-
+        
         // fetch from the API
         let response = await get("search", String(page));
         if(!response.ok) {
@@ -47,7 +47,15 @@ export default function Submissions() {
             }
 
             // check if a button is necessary
-            setLast(page < response.pages-1);
+            if(page < response.pages-1) {
+                setButton(
+                    <button className="button button-default" onClick={() => { nextPage() }}>Load More</button>
+                );
+            } else {
+                setButton(
+                    <p style={{textAlign: "center", textAlignLast: "center"}}>Looks like you've reached the end.</p>
+                );
+            }
         }
 
         setLoading(false);
@@ -66,8 +74,7 @@ export default function Submissions() {
                 {messages}
             </div>
 
-            {last ? <button className="button button-default" onClick={() => { nextPage() }}>Load More</button> :
-            <p style={{textAlign: "center", textAlignLast: "center"}}>Looks like you've reached the beginning.</p>}
+            {button}
         </section>
     );
 }
