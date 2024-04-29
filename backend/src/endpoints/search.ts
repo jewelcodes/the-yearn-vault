@@ -28,9 +28,14 @@ export default async function search(req: Request, res: Response) {
         messages.push(docs[i].id);
     }
 
-    response.ok = true;
-    response.pageSize = itemsPerPage;
-    response.pages = pageCount;
-    response.messages = messages;
+    if(page >= pageCount) {
+        response.ok = false;
+    } else {
+        response.ok = true;
+        response.pageSize = itemsPerPage;
+        response.pages = pageCount;
+        response.messages = messages;
+    }
+    
     respond(res, response);
 }
