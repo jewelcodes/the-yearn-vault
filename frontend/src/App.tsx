@@ -7,6 +7,7 @@ import About from "./pages/About/About";
 import Submit from "./pages/Submit/Submit";
 import Submissions from "./pages/Submissions/Submissions";
 import Support from "./pages/Support/Support";
+import Privacy from "./pages/Privacy/Privacy";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                     <Route path="submit" element={<Submit /> } />
                     <Route path="submissions" element={<Submissions />} />
                     <Route path="support" element={<Support />} />
+                    <Route path="privacy" element={<Privacy />} />
                 </Route>
             </Routes>
         </BrowserRouter>
