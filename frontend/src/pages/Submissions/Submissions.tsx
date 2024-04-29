@@ -32,7 +32,9 @@ export default function Submissions() {
                 if(messageData.ok) {
                     messages.push(
                         <div key={response.messages[i]}>
-                            <Message color={messageData.color} text={messageData.message} sender={messageData.sender} />
+                            <Link to={response.messages[i]}>
+                                <Message color={messageData.color} text={messageData.message} sender={messageData.sender} />
+                            </Link>
                         </div>
                     );
                 }

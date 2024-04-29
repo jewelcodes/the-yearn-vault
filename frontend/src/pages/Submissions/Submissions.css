@@ -8,9 +8,20 @@
     justify-content: center;
 }
 
+.submissions-container a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
 .submissions-container > div {
     width: calc(33% - 1vw);         /* 3 per row */
     margin: 1.5vh 0.5vw;
+    opacity: 0.87;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.submissions-container > div:hover {
+    opacity: 1;
 }
 
 /* mobile styles */
