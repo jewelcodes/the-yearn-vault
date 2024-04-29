@@ -10,9 +10,10 @@ export default function Submissions() {
     let [messages, setMessages] = useState([]);
     let [loading, setLoading] = useState(false);
     let [button, setButton] = useState(null);
+    let [last, setLast] = useState(false);
 
     const nextPage = () => {
-        setPage(page+1);
+        if(!last) setPage(page+1);
     };
 
     const loadPage = async () => {
@@ -54,6 +55,7 @@ export default function Submissions() {
                     <LoadMore handler={() => nextPage()} />
                 );
             } else {
+                setLast(true);
                 setButton(
                     <p style={{textAlign: "center", textAlignLast: "center"}}>Looks like you've reached the beginning.</p>
                 );
