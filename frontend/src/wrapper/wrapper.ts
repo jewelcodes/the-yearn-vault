@@ -1,4 +1,4 @@
-const buildApiRoot = "/api";
+const buildApiRoot = "/api/";
 const devApiRoot = "/";
 
 function dev() {
@@ -31,7 +31,7 @@ export async function get(endpoint:string, params:string) {
     let apiRoot:string;
     if(dev()) apiRoot = devApiRoot;
     else apiRoot = buildApiRoot;
-    
+
     let req = await fetch(apiRoot + endpoint + "/" + params, {
         method: "GET",
         mode: "cors",
