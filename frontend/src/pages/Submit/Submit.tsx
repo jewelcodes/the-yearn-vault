@@ -8,6 +8,9 @@ export default function Submit() {
     let [append, setAppend] = useState(<input type="submit" value="Submit" className="button button-default submit" />);
 
     const submitForm = async (e:any) => {
+        if(append == null) return;
+        setAppend(null);            // PREVENT SPAMMING
+
         // construct request body
         const sender = e.target.elements.sender.value;
         const message = e.target.elements.message.value;
