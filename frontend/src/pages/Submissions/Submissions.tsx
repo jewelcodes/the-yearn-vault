@@ -21,6 +21,7 @@ export default function Submissions() {
         }
 
         setLoading(true);
+        setButton(null);
 
         console.log("fetching page " + page);
         
@@ -33,7 +34,7 @@ export default function Submissions() {
             console.log(response);
 
             for(let i = 0; i < response.messages.length; i++) {
-                console.log("adding " + response.messages[i]);
+                //console.log("adding " + response.messages[i]);
                 let messageData = await get("read", response.messages[i]);
                 if(messageData.ok) {
                     messages.push(
@@ -49,7 +50,7 @@ export default function Submissions() {
             // check if a button is necessary
             if(page < response.pages-1) {
                 setButton(
-                    <button className="button button-default" onClick={() => { nextPage() }}>Load More</button>
+                    <button className="button button-default"  onClick={() => { nextPage() }}>Load More</button>
                 );
             } else {
                 setButton(
