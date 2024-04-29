@@ -1,6 +1,19 @@
-const apiRoot = "/";   // TODO: fix when deploying
+const buildApiRoot = "/api";
+const devApiRoot = "/";
+
+function dev() {
+    if(!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 export async function post(endpoint:string, body:string) {
+    let apiRoot:string;
+    if(dev()) apiRoot = devApiRoot;
+    else apiRoot = buildApiRoot;
+    
     let req = await fetch(apiRoot + endpoint, {
         method: "POST",
         mode: "cors",
@@ -15,6 +28,10 @@ export async function post(endpoint:string, body:string) {
 }
 
 export async function get(endpoint:string, params:string) {
+    let apiRoot:string;
+    if(dev()) apiRoot = devApiRoot;
+    else apiRoot = buildApiRoot;
+    
     let req = await fetch(apiRoot + endpoint + "/" + params, {
         method: "GET",
         mode: "cors",
