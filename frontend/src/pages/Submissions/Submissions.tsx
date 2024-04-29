@@ -53,7 +53,7 @@ export default function Submissions() {
                 );
             } else {
                 setButton(
-                    <p style={{textAlign: "center", textAlignLast: "center"}}>Looks like you've reached the end.</p>
+                    <p style={{textAlign: "center", textAlignLast: "center"}}>Looks like you've reached the beginning.</p>
                 );
             }
         }
