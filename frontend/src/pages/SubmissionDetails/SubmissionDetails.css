@@ -1,0 +1,11 @@
+.submission-details {
+    margin: 1em auto;
+    width: 60vw;
+}
+
+@media screen and (max-width: 1023px) {
+    .submission-details {
+        margin: 1em 0;
+        width: 100%;
+    }
+}
