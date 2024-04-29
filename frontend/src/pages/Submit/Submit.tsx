@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import MessageEditor from "../../components/MessageEditor";
 import "./Submit.css";
 import { Link } from "react-router-dom";
 import { post } from "../../wrapper/wrapper";
 
 export default function Submit() {
+    let [append, setAppend] = useState(<input type="submit" value="Submit" className="button button-default submit" />);
+
     const submitForm = async (e:any) => {
         // construct request body
         const sender = e.target.elements.sender.value;
@@ -19,7 +21,13 @@ export default function Submit() {
 
         // now make the request
         let response = await post("submit", body);
-        return response;
+        if(!response || !response.ok) {
+            // TODO: error handling
+        } else {
+            setAppend(
+                <p>Your message was posted. <Link to={"/submissions/" + response.id}>You can view it now</Link>.</p>
+            );
+        }
     };
 
     return (
@@ -31,7 +39,7 @@ export default function Submit() {
             }}>
                 <MessageEditor color="blue" />
                 <p className="disclaimer"><strong>Disclaimer:</strong> By clicking submit below, you acknowledge that you have read and agree to the <Link to="/privacy">privacy statement</Link>. You also agree to not abuse the platform by posting identifying content (i.e. usernames, phone numbers, etc.), spamming, or posting NSFW content.</p>
-                <input type="submit" value="Submit" className="button button-default submit" />
+                {append}
             </form>
         </section>
     );
