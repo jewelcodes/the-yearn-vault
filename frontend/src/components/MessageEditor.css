@@ -49,6 +49,7 @@
     border: 0.1em solid var(--black);
     cursor: pointer;
     transition: opacity 0.2s ease-in-out;
+    border-radius: 0.6em;
 }
 
 .color-picker div:hover {
