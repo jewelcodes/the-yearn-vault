@@ -43,9 +43,9 @@
 }
 
 .color-picker div {
-    width: calc(20% - 0.8vw);
-    padding-bottom: calc(20% - 0.8vw - 0.2em);
-    margin: 0.4vw;
+    width: calc(16.6% - 0.6vw);
+    padding-bottom: calc(16.6% - 0.6vw - 0.2em);
+    margin: 0.3vw;
     border: 0.1em solid var(--black);
     cursor: pointer;
     transition: opacity 0.2s ease-in-out;
@@ -73,6 +73,10 @@
 
 .color-green {
     background-color: var(--green);
+}
+
+.color-black {
+    background-color: var(--black);
 }
 
 
