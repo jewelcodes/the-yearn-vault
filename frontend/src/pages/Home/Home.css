@@ -143,3 +143,55 @@
 .home-works a:hover {
     text-decoration: none;
 }
+
+/* mobile styles */
+
+@media screen and (max-width: 1023px) {
+    .home-banner {
+        padding: 8vh calc(var(--side-spacing-desktop) * 3);
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .home-banner h1 {
+        width: 100%;
+        margin: 1.5em 0 1em 0;
+    }
+
+    .home-banner .phone {
+        width: 60%;
+        margin: 0 auto;
+        padding-bottom: 111%;    /* aspect ratio */
+        background-position: center center;
+    }
+
+    .home-description {
+        padding: 20vh calc(var(--side-spacing-desktop) * 2);
+        flex-direction: column;
+    }
+
+    .home-description h1 {
+        width: 100%;
+        font-size: 2.3em;
+    }
+
+    .home-description .type {
+        width: 35%;
+        padding-bottom: 29.4%;      /* aspect ratio */
+        display: block;
+        margin: 0 auto 4em auto;
+    }
+
+    .home-works {
+        padding: 18vh var(--side-spacing-desktop);
+    }
+
+    .home-works h1 {
+        font-size: 3em;
+    }
+
+    .home-works h2 {
+        font-size: 1.9em;
+    }
+}
