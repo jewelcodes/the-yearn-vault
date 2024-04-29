@@ -8,7 +8,7 @@
     padding-bottom: 100%;
 
     margin: 0 auto 8.26% auto;  /* aspect ratio */
-    font-size: 1.5em;
+    font-size: 1.15em;
 }
 
 .message-sender {
@@ -27,6 +27,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-overflow: ellipsis;
+}
+
+p.message-text {    /* only for the actual text and not the textarea, thus emphasizing the p tag */
+    padding: 0.5em;
 }
 
 /* 184x152 */
