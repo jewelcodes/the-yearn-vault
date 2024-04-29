@@ -34,6 +34,7 @@ export default function Submissions() {
         } else {
             // fetch the messages one by one
             console.log(response);
+            let messagesTemp:any = [];
 
             for(let i = 0; i < response.messages.length; i++) {
                 //console.log("adding " + response.messages[i]);
@@ -46,6 +47,7 @@ export default function Submissions() {
                             </Link>
                         </div>
                     );
+
                     /*setMessages([...messages, (
                         <div key={response.messages[i]}>
                             <Link to={response.messages[i]}>
@@ -54,6 +56,8 @@ export default function Submissions() {
                         </div>
                     )]);*/
                 }
+
+                //setMessages(messages.concat(messagesTemp));
             }
 
             // check if a button is necessary
