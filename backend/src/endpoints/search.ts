@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import respond from "../respond";
 
 export default async function search(req: Request, res: Response) {
-    const itemsPerPage:number = 30;     // constant
+    const itemsPerPage:number = 3;     // constant
 
     let response:any = {};
     let messages:any = [];
