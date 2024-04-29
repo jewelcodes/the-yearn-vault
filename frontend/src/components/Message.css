@@ -11,10 +11,20 @@
     font-size: 1.15em;
 }
 
+.message-details {
+    padding-bottom: 40% !important;
+    font-size: 1.4em;
+}
+
 .message-sender {
     text-align: left;
     margin: 0 auto 0.3em auto;
     font-size: smaller;
+}
+
+.message-sender-details {
+    font-size: inherit !important;
+    margin: 0 auto 0.5em auto !important;
 }
 
 .message-text {
@@ -98,5 +108,20 @@ p.message-text {    /* only for the actual text and not the textarea, thus empha
 @media screen and (max-width: 1023px) {
     .message {
         font-size: 1em;
+    }
+
+    .message-details {
+        width: 90vw;
+        height: 28vh;
+        font-size: 1.1em;
+    }
+
+    .message-details p {
+        font-size: 1.1em;
+    }
+
+    .message-sender-details {
+        width: 90vw;
+        font-size: 1.1em;
     }
 }
