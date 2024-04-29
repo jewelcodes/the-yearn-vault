@@ -94,6 +94,15 @@ p.message-text {    /* only for the actual text and not the textarea, thus empha
     background-image: url("../assets/purple-arrow.png");
 }
 
+.message-black {
+    background-color: var(--gray);
+    color: var(--white);
+}
+
+.message-black::after {
+    background-image: url("../assets/black-arrow.png");
+}
+
 .message-orange {
     background-color: var(--orange);
     color: var(--white);
