@@ -7,10 +7,14 @@ import respond from "../respond";
 export default async function submit(req: Request, res: Response) {
     //console.log("submit endpoint called");
     //console.log(req);
-    const sender = req.body.sender;
+    let sender = req.body.sender;
     const message = req.body.message;
     const color = req.body.color;
     const timezone = req.body.timezone;
+
+    if(!sender || sender === "") {
+        sender = "Anonymous";
+    }
 
     const id = uuidv4();
     const timestamp = new Date().getTime();     // TODO: fix this to use UTC time
