@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 import respond from "../respond";
 
 export default async function search(req: Request, res: Response) {
-    const itemsPerPage:number = 3;     // constant
+    const itemsPerPage:number = 6;     // constant
 
     let response:any = {};
     let messages:any = [];
@@ -25,7 +25,13 @@ export default async function search(req: Request, res: Response) {
     }
 
     for(let i = 0; docs.length && i < docs.length; i++) {
-        messages.push(docs[i].id);
+        let message:any = {};
+        message.id = docs[i].id;
+        message.sender = docs[i].sender;
+        message.message = docs[i].message;
+        message.color = docs[i].color;
+
+        messages.push(message);
     }
 
     if(page >= pageCount) {
