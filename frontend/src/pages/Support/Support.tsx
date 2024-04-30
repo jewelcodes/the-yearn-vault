@@ -10,11 +10,11 @@ export default function Support() {
             <p>
                 <strong>Choose your preferred payment method:</strong>
                 <ul>
-                    <li><a href="https://www.patreon.com/TheYearnVault">Patreon</a></li>
-                    <li><a href="https://ko-fi.com/theyearnvault">Ko-fi</a></li>
+                    <li><a target="_blank" href="https://www.patreon.com/TheYearnVault">Patreon</a></li>
+                    <li><a target="_blank" href="https://ko-fi.com/theyearnvault">Ko-fi</a></li>
                 </ul>
             </p>
-            <p>Thank you for considering it! To see more of my projects, take a look at <a href="https://jewelcodes.io/">my blog</a>.</p>
+            <p>Thank you for considering it! To see more of my projects, take a look at <a target="_blank" href="https://jewelcodes.io/">my blog</a>.</p>
         </section>
     )
 }

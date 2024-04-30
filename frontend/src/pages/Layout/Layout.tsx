@@ -22,7 +22,7 @@ function Menu() {
             <Outlet />
             <footer>
                 <div>Made with 💗 from Boston &amp; Cairo</div>
-                <div><a href="https://jewelcodes.io/">jewelcodes.io</a></div>
+                <div><a target="_blank" href="https://jewelcodes.io/">jewelcodes.io</a></div>
             </footer>
         </>
     );
