@@ -39,6 +39,8 @@
     text-overflow: ellipsis;
     text-wrap: wrap;
     word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 p.message-text {    /* only for the actual text and not the textarea, thus emphasizing the p tag */
