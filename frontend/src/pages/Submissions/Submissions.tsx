@@ -38,24 +38,26 @@ export default function Submissions() {
 
             for(let i = 0; i < response.messages.length; i++) {
                 //console.log("adding " + response.messages[i]);
-                let messageData = await get("read", response.messages[i]);
-                if(messageData.ok) {
-                    messages.push(
-                        <div key={response.messages[i]}>
-                            <Link to={response.messages[i]}>
-                                <Message color={messageData.color} text={messageData.message} sender={messageData.sender} />
-                            </Link>
-                        </div>
-                    );
+                //let messageData = await get("read", response.messages[i]);    // eliminate unnecessary requests
+                messages.push(
+                    <div key={response.messages[i].id}>
+                        <Link to={response.messages[i].id}>
+                            <Message
+                                color={response.messages[i].color}
+                                text={response.messages[i].message}
+                                sender={response.messages[i].sender}
+                            />
+                        </Link>
+                    </div>
+                );
 
-                    /*setMessages([...messages, (
-                        <div key={response.messages[i]}>
-                            <Link to={response.messages[i]}>
-                                <Message color={messageData.color} text={messageData.message} sender={messageData.sender} />
-                            </Link>
-                        </div>
-                    )]);*/
-                }
+                /*setMessages([...messages, (
+                    <div key={response.messages[i]}>
+                        <Link to={response.messages[i]}>
+                            <Message color={messageData.color} text={messageData.message} sender={messageData.sender} />
+                        </Link>
+                    </div>
+                )]);*/
 
                 //setMessages(messages.concat(messagesTemp));
             }
