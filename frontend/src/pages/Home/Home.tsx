@@ -15,7 +15,7 @@ function Home() {
             </section>
             <section className="home-works">
                 <h1>How it works</h1>
-                <h2>Anonymously submit what you wish you were told, optionally with their name. View everyone else's submissions and let them see yours.</h2>
+                <h2>Anonymously submit what you wish you were told, optionally with their name. Read everyone else's affirmations and let them see yours.</h2>
                 <Link to="/submit" className="button button-default">Submit Your Own</Link>
                 <div className="h-spacer" style={{width:"1em"}} />
                 <Link to="/submissions" className="button">Read the Archive</Link>
