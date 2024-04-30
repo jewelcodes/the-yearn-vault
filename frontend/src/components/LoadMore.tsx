@@ -12,6 +12,6 @@ export default function LoadMore(props:any) {
     }, [visible]);
     
     return (
-        <button ref={ref} className="button button-default"  onClick={props.handler}>Load More</button>
+        <button ref={ref} className="button button-default">Loading more...</button>
     );
 }
