@@ -30,12 +30,12 @@ function Menu() {
                 </div>
                 <ul className={menuClass}>
                     <li><Link to="/">Home</Link></li>
+                    <li><i className="fa-solid fa-x menu-button close-menu-button" onClick={toggleMenu} /></li>
                     <li><Link to="/submissions">Submissions</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/privacy">Privacy</Link></li>
                     <li><Link to="/support">Support the Project</Link></li>
                     <li><Link to="/submit">Submit</Link></li>
-                    <li><i className="fa-solid fa-x menu-button close-menu-button" onClick={toggleMenu} /></li>
                 </ul>
                 <div className="submit">
                     <Link to="/submit">Submit</Link>
