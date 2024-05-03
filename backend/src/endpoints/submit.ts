@@ -7,13 +7,23 @@ import respond from "../respond";
 export default async function submit(req: Request, res: Response) {
     //console.log("submit endpoint called");
     //console.log(req);
+    let response:any = {};
+
     let sender = req.body.sender;
-    const message = req.body.message;
+    let message = req.body.message;
     const color = req.body.color;
     const timezone = req.body.timezone;
 
     if(!sender || sender === "") {
         sender = "Anonymous";
+    }
+
+    message = message.trim();
+    sender = sender.trim();
+    if(message.length > 100 || sender.length > 20) {    // validate input
+        response.ok = false;
+        respond(res, response);
+        return;
     }
 
     const id = uuidv4();
@@ -31,7 +41,6 @@ export default async function submit(req: Request, res: Response) {
 
     await doc.save();
 
-    let response:any = {};
     response.ok = true;
     response.id = id;
     respond(res, response);
