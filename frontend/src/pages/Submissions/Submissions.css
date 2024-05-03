@@ -36,6 +36,11 @@
     font-family: inherit;
     font-size: inherit;
     color: inherit;
+    transition: background 0.2s ease-in-out;
+}
+
+.search:focus {
+    background-color: var(--medium5);
 }
 
 /* mobile styles */

@@ -11,6 +11,24 @@ export default function Submissions() {
     let [loading, setLoading] = useState(false);
     let [button, setButton] = useState(null);
     let [last, setLast] = useState(false);
+    let [query, setQuery] = useState(null);
+
+    const updateQuery = (e:any) => {
+        setButton(
+            <p style={{textAlign: "center", textAlignLast: "center"}}>...</p>
+        );
+        setMessages([]);
+        setLast(false);
+
+        const value = e.nativeEvent.target.value;
+        if(!value || value === "") {
+            setQuery(null);
+        } else {
+            setQuery(value);
+        }
+
+        setPage(0);
+    };
 
     const nextPage = () => {
         if(!last) setPage(page+1);
@@ -25,15 +43,26 @@ export default function Submissions() {
         setLoading(true);
         setButton(null);
 
-        console.log("fetching page " + page);
+        console.log("fetching page " + page + " query " + query);
         
         // fetch from the API
-        let response = await get("search", String(page));
+        let params = String(page);
+        if(query) params += "/" + String(query);
+        let response = await get("search", params);
         if(!response.ok) {
-            // TODO: ERROR HANDLING HERE
+            setLast(true);
+            if(query) {
+                setButton(
+                    <p style={{textAlign: "center", textAlignLast: "center"}}>No messages by {query} were found.</p>
+                );
+            } else {
+                setButton(
+                    <p style={{textAlign: "center", textAlignLast: "center"}}>Unable to fetch messages. Please check your internet connection.</p>
+                );
+            }
         } else {
             // fetch the messages one by one
-            console.log(response);
+            //console.log(response);
             let messagesTemp:any = [];
 
             for(let i = 0; i < response.messages.length; i++) {
@@ -80,12 +109,12 @@ export default function Submissions() {
 
     useEffect(() => {
         if(!loading) loadPage();
-    }, [page]);
+    }, [query, page]);
 
     return (
         <section className="sec">
             <h1>The Yearn Vault</h1>
-            <input type="text" autoComplete="off" placeholder="Search by author" className="search" />
+            <input type="text" autoComplete="off" placeholder="Search by author" className="search" onInput={updateQuery} />
 
             <div className="submissions-container">
                 {messages}
