@@ -31,3 +31,14 @@
         width: calc(50% - 1vw);     /* 2 per row */
     }
 }
+
+@media screen and (max-width: 359px) {  /* for taller screens like the galaxy fold */
+    .submissions-container {
+        flex-direction: column;
+        margin: 1em 4vw;
+    }
+
+    .submissions-container > div {
+        width: calc(100% - 1vw);
+    }
+}
