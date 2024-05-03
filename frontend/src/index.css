@@ -144,4 +144,9 @@ a:hover {
     .sec h2 {
         font-size: 0.8em;
     }
+
+    .button {
+        font-size: 1.05em;
+        padding: 1em 1.15em;
+    }
 }
