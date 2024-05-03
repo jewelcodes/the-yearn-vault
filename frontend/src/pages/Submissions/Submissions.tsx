@@ -85,7 +85,7 @@ export default function Submissions() {
     return (
         <section className="sec">
             <h1>The Yearn Vault</h1>
-            {/* TODO: implement a search function here */}
+            <input type="text" autoComplete="off" placeholder="Search by author" className="search" />
 
             <div className="submissions-container">
                 {messages}

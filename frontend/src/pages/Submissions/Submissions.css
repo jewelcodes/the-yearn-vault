@@ -24,6 +24,20 @@
     opacity: 1;
 }
 
+.search {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    padding: 0.4em 1em;
+    border: 1px solid var(--dark);
+    border-radius: 1em;
+    background: none var(--medium4);
+    --webkit-appearance: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
 /* mobile styles */
 
 @media screen and (max-width: 1023px) {
