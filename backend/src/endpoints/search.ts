@@ -20,8 +20,9 @@ export default async function search(req: Request, res: Response) {
         docs = await Model.find().skip(page*itemsPerPage).sort({$natural: -1}).limit(itemsPerPage);
         pageCount = Math.floor((await Model.countDocuments() + itemsPerPage - 1) / itemsPerPage);
     } else {
-        docs = await Model.find({sender: query}).skip(page*itemsPerPage).sort({$natural: -1}).limit(itemsPerPage);
-        pageCount = Math.floor((await Model.countDocuments({sender: query}) + itemsPerPage - 1) / itemsPerPage);
+        const regex = new RegExp(query.toLocaleLowerCase(), "i");
+        docs = await Model.find({sender: regex}).skip(page*itemsPerPage).sort({$natural: -1}).limit(itemsPerPage);
+        pageCount = Math.floor((await Model.countDocuments({sender: regex}) + itemsPerPage - 1) / itemsPerPage);
     }
 
     for(let i = 0; docs.length && i < docs.length; i++) {
