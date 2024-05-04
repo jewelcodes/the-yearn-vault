@@ -12,4 +12,5 @@
 * [x] Intuitive UI focusing on blue for a "blue" feel
 * [x] Responsiveness to different screens and device types
 * [x] RESTful APIs for submitting and retrieving messages
-* [ ] Searching by author (partly done: backend functionality exists but there is still no UI for it)
+* [x] Searching by author
+* [ ] Searching by message content
