@@ -14,9 +14,10 @@ export default function Submissions() {
     let [query, setQuery] = useState(null);
 
     const updateQuery = (e:any) => {
-        setButton(
+        /*setButton(
             <p style={{textAlign: "center", textAlignLast: "center"}}>...</p>
-        );
+        );*/
+        
         setMessages([]);
         setLast(false);
 
@@ -41,7 +42,7 @@ export default function Submissions() {
         }
 
         setLoading(true);
-        setButton(null);
+        //setButton(null);
 
         console.log("fetching page " + page + " query " + query);
         
