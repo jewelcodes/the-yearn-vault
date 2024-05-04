@@ -49,6 +49,10 @@
     .submissions-container > div {
         width: calc(50% - 1vw);     /* 2 per row */
     }
+
+    .search {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 359px) {  /* for taller screens like the galaxy fold */
@@ -59,5 +63,9 @@
 
     .submissions-container > div {
         width: calc(100% - 1vw);
+    }
+
+    .search {
+        width: calc(100% - 8vw);
     }
 }
